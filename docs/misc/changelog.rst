@@ -4,7 +4,7 @@ Changelog
 ==========
 
 
-Release 2.8.0a3 (WIP)
+Release 2.8.0a4 (WIP)
 --------------------------
 
 Breaking Changes:
@@ -20,6 +20,7 @@ Bug Fixes:
 ^^^^^^^^^^
 - Fixed saving and loading of Torch compiled models (using ``th.compile()``) by updating ``get_parameters()``
 - Added a warning to env-checker if a multidiscrete space has multi-dimensional array (@unexploredtest)
+- Fixed ``pandas.concat`` futurewarnings occuring when dataframes are empty by removing empty frames from the list before concatenating
 
 `SB3-Contrib`_
 ^^^^^^^^^^^^^^
@@ -42,6 +43,7 @@ Others:
 - Simplified zip file loading by removing Python 3.6 workaround and enabling ``weights_only=True`` (PyTorch 2.x)
 - Sped up saving/loading tests
 - Updated black from v25 to v26
+- Updated monitor test to check handling of empty monitor files
 
 
 Documentation:
